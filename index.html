@@ -6,8 +6,8 @@
     <meta name="color-scheme" content="dark">
     <meta name="theme-color" content="#0f172a" id="metaThemeColor">
     
-    <title>MODORA - Unduh Apps & Games MOD APK New Version</title>
-    <meta name="description" content="Platform terbaik untuk unduh aplikasi dan game MOD APK gratis, aman, dan versi terbaru untuk Android.">
+    <title>GMCOKILLER MOD APK</title>
+    <meta name="description" content="GMCOKILLER - MODS APK">
     <meta name="keywords" content="MODORA, mod apk, unduh game mod, aplikasi premium gratis, download apk mod, game android">
     <meta name="author" content="MODORA Official Inc.">
     <meta name="robots" content="index, follow">
@@ -17,7 +17,7 @@
     <meta property="og:url" content="https://gmcokiller.biz.id/">
     <meta property="og:title" content="MODORA - Unduh Apps & Games MOD APK">
     <meta property="og:description" content="Platform terbaik untuk unduh aplikasi dan game MOD APK gratis, aman, dan versi terbaru untuk Android.">
-    <meta property="og:image" content="/modora.png">
+    <meta property="og:image" content="https://gmcokiller.biz.id/modora.png">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://gmcokiller.biz.id/">
@@ -138,15 +138,15 @@
             transition: background-color 0.25s ease, border-color 0.25s ease;
         }
 
-        .logo { font-size: 24px; font-weight: 800; background: linear-gradient(90deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px; cursor: pointer; }
+        .logo { font-size: 24px; font-weight: 800; background: linear-gradient(90deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px; cursor: pointer; flex-shrink: 0; }
         
-        .search-wrap { flex: 1; margin: 0 15px; position: relative; max-width: 400px; }
-        .search-input { width: 100%; padding: 10px 40px 10px 15px; border-radius: 12px; border: none; background: var(--search-bg); color: var(--text-main); font-size: 14px; transition: background-color 0.25s ease, box-shadow 0.25s ease; font-weight: 500; }
+        .search-wrap { flex: 1; margin: 0 10px; position: relative; max-width: 400px; display: flex; min-width: 0; }
+        .search-input { width: 100%; min-width: 0; padding: 10px 40px 10px 15px; border-radius: 12px; border: none; background: var(--search-bg); color: var(--text-main); font-size: 14px; transition: background-color 0.25s ease, box-shadow 0.25s ease; font-weight: 500; }
         .search-input:focus { box-shadow: 0 0 0 2px var(--primary); background: var(--bg-card); }
         .search-input::placeholder { color: var(--text-muted); font-weight: 400; }
         .search-icon { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 14px; pointer-events: none; }
         
-        .btn-tele { width: 40px; height: 40px; background: #29b6f6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; text-decoration: none; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(41, 182, 246, 0.3); }
+        .btn-tele { width: 40px; height: 40px; background: #29b6f6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; text-decoration: none; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(41, 182, 246, 0.3); flex-shrink: 0; }
         .btn-tele:active { transform: scale(0.9); }
 
         @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
@@ -174,6 +174,18 @@
         .recom-wrap::-webkit-scrollbar { display: none; }
         .recom-scroll { display: flex; gap: 15px; width: max-content; padding-right: 15px; }
 
+        /* --- SCROLL ANIMATIONS --- */
+        .scroll-wait {
+            opacity: 0;
+            transform: translateY(30px) scale(0.96);
+            transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            will-change: opacity, transform;
+        }
+        .scroll-wait.scrolled-in {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
         .trend-card {
             width: 300px; height: 165px; border-radius: 24px; background: var(--bg-card);
             border: 1px solid var(--card-border); position: relative; overflow: hidden;
@@ -183,12 +195,20 @@
             flex-shrink: 0;
         }
         .trend-card:active { transform: scale(0.96); }
-        .trend-bg { position: absolute; right: -25px; bottom: -25px; width: 150px; opacity: 0.5; filter: blur(5px); transform: rotate(-15deg); pointer-events: none; }
+        .trend-bg { position: absolute; right: -25px; bottom: -25px; width: 150px; opacity: 0; filter: blur(5px); transform: rotate(-15deg); pointer-events: none; transition: opacity 0.5s ease; }
         .trend-badge { position: absolute; top: 16px; right: 16px; background: var(--primary); color: white; font-size: 10px; padding: 5px 12px; border-radius: 20px; font-weight: 800; z-index: 2; box-shadow: 0 2px 8px rgba(0,0,0,0.2); text-transform: uppercase; letter-spacing: 0.5px; }
         .trend-name { font-size: 20px; font-weight: 800; width: 85%; line-height: 1.3; margin-bottom: 6px; z-index: 2; position: relative; letter-spacing: -0.5px; }
         .trend-act { font-size: 13px; color: var(--text-muted); font-weight: 600; z-index: 2; position: relative; }
 
-        .list-container { width: 100%; display: grid; gap: 14px; min-height: 100px; }
+        /* --- LIST ENTRANCE ANIMATION --- */
+        @keyframes listSlideIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .list-container { 
+            width: 100%; display: grid; gap: 14px; min-height: 100px; 
+            animation: listSlideIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
         .list-container.view-list { grid-template-columns: 1fr; }
         .list-container.view-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; align-items: start; }
 
@@ -207,7 +227,17 @@
         .view-grid .clean-card .btn-unduh { width: 100%; margin-top: auto; padding: 10px; }
 
         .icon-wrap { position: relative; width: 60px; height: 60px; flex-shrink: 0; }
-        .clean-icon { width: 100%; height: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.08); background-color: var(--border); pointer-events: none; transition: background-color 0.25s ease; }
+        
+        /* --- SPINNER & ICON CSS --- */
+        .img-spinner {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            font-size: 20px; color: var(--primary); z-index: 1;
+        }
+        .clean-icon { 
+            width: 100%; height: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+            background-color: var(--border); pointer-events: none; opacity: 0; position: relative; z-index: 2; transition: opacity 0.4s ease, background-color 0.25s ease; 
+        }
+        
         .mod-label {
             position: absolute; bottom: -5px; right: -5px; background: var(--accent); color: white;
             font-size: 9px; font-weight: 800; padding: 3px 6px; border-radius: 8px; 
@@ -362,7 +392,8 @@
     </header>
 
     <main id="mainView">
-        <section id="section-recom">
+
+        <section id="section-recom" class="scroll-wait">
             <div class="section-head" id="t-recom"><i class="fa-solid fa-wand-magic-sparkles recom-icon"></i> Recommended</div>
             <div class="recom-wrap"><div class="recom-scroll" id="recomContainer">
                 <div class="skeleton skel-trend"></div>
@@ -370,8 +401,8 @@
                 <div class="skeleton skel-trend"></div>
             </div></div>
         </section>
-        
-        <section id="section-games">
+
+        <section id="section-games" class="scroll-wait">
             <div class="section-head" id="t-games"><i class="fa-solid fa-gamepad games-icon"></i> Games</div>
             <div class="list-container view-list" id="gamesContainer">
                 <div class="skel-card"><div class="skeleton skel-icon"></div><div class="skel-info"><div class="skeleton skel-line"></div><div class="skeleton skel-line short"></div></div><div class="skeleton skel-btn"></div></div>
@@ -380,7 +411,7 @@
             <div class="btn-loadmore hidden" id="btnMoreGames" onclick="loadMoreGames()"><span id="t-showMoreGames">Show More</span> <i class="fa-solid fa-chevron-down"></i></div>
         </section>
         
-        <section id="section-apps">
+        <section id="section-apps" class="scroll-wait">
             <div class="section-head" id="t-apps"><i class="fa-solid fa-grip apps-icon"></i> Apps</div>
             <div class="list-container view-list" id="appsContainer">
                 <div class="skel-card"><div class="skeleton skel-icon"></div><div class="skel-info"><div class="skeleton skel-line"></div><div class="skeleton skel-line short"></div></div><div class="skeleton skel-btn"></div></div>
@@ -471,12 +502,12 @@
     <script>
         // --- MULTI-LANGUAGE SYSTEM (i18n) ---
         const i18n = {
-            en: { recom: "Recommended", games: "Games", apps: "Apps", search: "Search...", showMore: "Show More", home: "Home", settings: "Settings", colorTheme: "Color Theme", batterySaver: "Battery Saver (No Blur)", viewMode: "View Mode", fontStyle: "Font Style", list: "List", grid: "Grid", reset: "Reset", close: "Close", noGames: "No games found in this repository.", noApps: "No apps found in this repository.", getBtn: "GET", getNow: "Get Now" },
-            id: { recom: "Rekomendasi", games: "Game", apps: "Aplikasi", search: "Cari...", showMore: "Tampilkan", home: "Beranda", settings: "Pengaturan", colorTheme: "Tema Warna", batterySaver: "Hemat Baterai", viewMode: "Tampilan", fontStyle: "Gaya Huruf", list: "Daftar", grid: "Kotak", reset: "Atur Ulang", close: "Tutup", noGames: "Tidak ada game ditemukan.", noApps: "Tidak ada aplikasi ditemukan.", getBtn: "UNDUH", getNow: "Dapatkan" },
-            es: { recom: "Recomendado", games: "Juegos", apps: "Aplicaciones", search: "Buscar...", showMore: "Mostrar Más", home: "Inicio", settings: "Ajustes", colorTheme: "Tema de Color", batterySaver: "Ahorro de Batería", viewMode: "Modo de Vista", fontStyle: "Estilo de Fuente", list: "Lista", grid: "Cuadrícula", reset: "Reiniciar", close: "Cerrar", noGames: "No se encontraron juegos.", noApps: "No se encontraron aplicaciones.", getBtn: "OBTENER", getNow: "Consíguelo" },
-            pt: { recom: "Recomendado", games: "Jogos", apps: "Aplicativos", search: "Pesquisar...", showMore: "Mostrar Mais", home: "Início", settings: "Configurações", colorTheme: "Tema de Cor", batterySaver: "Economia de Bateria", viewMode: "Modo de Exibição", fontStyle: "Estilo de Fonte", list: "Lista", grid: "Grade", reset: "Redefinir", close: "Fechar", noGames: "Nenhum jogo encontrado.", noApps: "Nenhum aplicativo encontrado.", getBtn: "OBTER", getNow: "Obter Agora" },
-            ru: { recom: "Рекомендуемые", games: "Игры", apps: "Приложения", search: "Поиск...", showMore: "Показать еще", home: "Главная", settings: "Настройки", colorTheme: "Цветовая тема", batterySaver: "Экономия батареи", viewMode: "Режим просмотра", fontStyle: "Стиль шрифта", list: "Список", grid: "Сетка", reset: "Сброс", close: "Закрыть", noGames: "Игры не найдены.", noApps: "Приложения не найдены.", getBtn: "СКАЧАТЬ", getNow: "Получить" },
-            hi: { recom: "अनुशंसित", games: "खेल", apps: "ऐप्स", search: "खोजें...", showMore: "और दिखाएं", home: "होम", settings: "सेटिंग्स", colorTheme: "रंग विषय", batterySaver: "बैटरी सेवर", viewMode: "दृश्य मोड", fontStyle: "फ़ॉन्ट शैली", list: "सूची", grid: "ग्रिड", reset: "रीसेट", close: "बंद करें", noGames: "कोई खेल नहीं मिला।", noApps: "कोई ऐप नहीं मिला।", getBtn: "प्राप्त करें", getNow: "अभी प्राप्त करें" }
+            en: { recom: "Recommended", games: "Games", apps: "Apps", search: "Search...", showMore: "Show More", home: "Home", settings: "Settings", colorTheme: "Color Theme", batterySaver: "Battery Saver (No Blur)", viewMode: "View Mode", fontStyle: "Font Style", list: "List", grid: "Grid", reset: "Reset", close: "Close", noGames: "No games found in this repository.", noApps: "No apps found in this repository.", getBtn: "GET", getNow: "Get Now", didYouMean: "No exact match. Did you mean:" },
+            id: { recom: "Rekomendasi", games: "Game", apps: "Aplikasi", search: "Cari...", showMore: "Tampilkan", home: "Beranda", settings: "Pengaturan", colorTheme: "Tema Warna", batterySaver: "Hemat Baterai", viewMode: "Tampilan", fontStyle: "Gaya Huruf", list: "Daftar", grid: "Kotak", reset: "Atur Ulang", close: "Tutup", noGames: "Tidak ada game ditemukan.", noApps: "Tidak ada aplikasi ditemukan.", getBtn: "UNDUH", getNow: "Dapatkan", didYouMean: "Tidak ditemukan. Apakah maksud kamu:" },
+            es: { recom: "Recomendado", games: "Juegos", apps: "Aplicaciones", search: "Buscar...", showMore: "Mostrar Más", home: "Inicio", settings: "Ajustes", colorTheme: "Tema de Color", batterySaver: "Ahorro de Batería", viewMode: "Modo de Vista", fontStyle: "Estilo de Fuente", list: "Lista", grid: "Cuadrícula", reset: "Reiniciar", close: "Cerrar", noGames: "No se encontraron juegos.", noApps: "No se encontraron aplicaciones.", getBtn: "OBTENER", getNow: "Consíguelo", didYouMean: "Sin coincidencias exactas. Quisiste decir:" },
+            pt: { recom: "Recomendado", games: "Jogos", apps: "Aplicativos", search: "Pesquisar...", showMore: "Mostrar Mais", home: "Início", settings: "Configurações", colorTheme: "Tema de Cor", batterySaver: "Economia de Bateria", viewMode: "Modo de Exibição", fontStyle: "Estilo de Fonte", list: "Lista", grid: "Grade", reset: "Redefinir", close: "Fechar", noGames: "Nenhum jogo encontrado.", noApps: "Nenhum aplicativo encontrado.", getBtn: "OBTER", getNow: "Obter Agora", didYouMean: "Sem correspondência exata. Você quis dizer:" },
+            ru: { recom: "Рекомендуемые", games: "Игры", apps: "Приложения", search: "Поиск...", showMore: "Показать еще", home: "Главная", settings: "Настройки", colorTheme: "Цветовая тема", batterySaver: "Экономия батареи", viewMode: "Режим просмотра", fontStyle: "Стиль шрифта", list: "Список", grid: "Сетка", reset: "Сброс", close: "Закрыть", noGames: "Игры не найдены.", noApps: "Приложения не найдены.", getBtn: "СКАЧАТЬ", getNow: "Получить", didYouMean: "Нет точных совпадений. Вы имели в виду:" },
+            hi: { recom: "अनुशंसित", games: "खेल", apps: "ऐप्स", search: "खोजें...", showMore: "और दिखाएं", home: "होम", settings: "सेटिंग्स", colorTheme: "रंग विषय", batterySaver: "बैटरी सेवर", viewMode: "दृश्य मोड", fontStyle: "फ़ॉन्ट शैली", list: "सूची", grid: "ग्रिड", reset: "रीसेट", close: "बंद करें", noGames: "कोई खेल नहीं मिला।", noApps: "कोई ऐप नहीं मिला।", getBtn: "प्राप्त करें", getNow: "अभी प्राप्त करें", didYouMean: "कोई सटीक मिलान नहीं। क्या आपका मतलब था:" }
         };
 
         let userLang = (navigator.language || navigator.userLanguage).substring(0, 2).toLowerCase();
@@ -558,6 +589,22 @@
         let showGamesCount = 10;
         let isDataLoaded = false;
 
+        // --- INTERSECTION OBSERVER UNTUK ANIMASI SCROLL ---
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('scrolled-in');
+                    scrollObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+
+        function triggerScrollAnimations() {
+            setTimeout(() => {
+                document.querySelectorAll('.scroll-wait:not(.scrolled-in)').forEach(el => scrollObserver.observe(el));
+            }, 50);
+        }
+
         function getBaseName(name) {
             let n = name.toLowerCase();
             n = n.replace(/v\d+(\.\d+)*/g, '');
@@ -633,6 +680,7 @@
             renderRecom();
             renderLists();
             updateNavBadges();
+            triggerScrollAnimations();
         }
 
         function updateNavBadges() {
@@ -684,11 +732,12 @@
             
             shuffled.forEach(item => {
                 html += `
-                <div class="trend-card" onclick="openLink('${item.link}')">
+                <div class="trend-card scroll-wait" onclick="openLink('${item.link}')">
                     <span class="trend-badge">MOD</span>
                     <div class="trend-name">${item.name}</div>
                     <div class="trend-act">${t('getNow')} <i class="fa-solid fa-arrow-right"></i></div>
-                    <img src="${item.img}" class="trend-bg" loading="lazy" onerror="this.style.opacity=0">
+                    <div class="img-spinner" style="position:absolute; right:35px; bottom:30px; font-size:24px; z-index:1;"><i class="fa-solid fa-circle-notch fa-spin"></i></div>
+                    <img src="${item.img}" class="trend-bg" loading="lazy" onload="this.previousElementSibling.style.display='none'; this.style.opacity=0.5;" onerror="this.previousElementSibling.style.display='none'; this.style.opacity=0">
                 </div>`;
             });
             
@@ -697,10 +746,12 @@
         }
 
         function createCardHtml(item) {
-            let iconHtml = `<img src="${item.img}" class="clean-icon" loading="lazy" onerror="this.src='https://via.placeholder.com/70?text=IMG'">`;
+            let iconHtml = `
+                <div class="img-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i></div>
+                <img src="${item.img}" class="clean-icon" loading="lazy" onload="this.previousElementSibling.style.display='none'; this.style.opacity=1;" onerror="this.previousElementSibling.style.display='none'; this.src='https://via.placeholder.com/70?text=IMG'; this.style.opacity=1;">`;
 
             return `
-            <div class="clean-card" onclick="openLink('${item.link}')">
+            <div class="clean-card scroll-wait" onclick="openLink('${item.link}')">
                 <div class="icon-wrap">
                     ${iconHtml}
                     <div class="mod-label">MOD</div>
@@ -739,6 +790,7 @@
                 cApps.innerHTML = hApps;
                 document.getElementById('btnMoreApps').classList.toggle('hidden', showAppsCount >= dbApps.length);
             }
+            triggerScrollAnimations();
         }
 
         function loadMoreApps() { showAppsCount += 10; renderLists(); }
@@ -749,11 +801,30 @@
             else alert('Link is broken or still processing!'); 
         }
 
+        // --- ALGORITMA LEVENSHTEIN DISTANCE UNTUK FUZZY SEARCH (TYPO) ---
+        function levenshteinDistance(a, b) {
+            const matrix = [];
+            for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+            for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+            for (let i = 1; i <= b.length; i++) {
+                for (let j = 1; j <= a.length; j++) {
+                    if (b.charAt(i - 1) === a.charAt(j - 1)) {
+                        matrix[i][j] = matrix[i - 1][j - 1];
+                    } else {
+                        matrix[i][j] = Math.min(matrix[i - 1][j - 1] + 1, Math.min(matrix[i][j - 1] + 1, matrix[i - 1][j] + 1));
+                    }
+                }
+            }
+            return matrix[b.length][a.length];
+        }
+
         function doSearch() {
-            const val = document.getElementById('search').value.toLowerCase();
+            const val = document.getElementById('search').value.toLowerCase().trim();
             const secRecom = document.getElementById('section-recom');
             const secApps = document.getElementById('section-apps');
             const secGames = document.getElementById('section-games');
+            const cGames = document.getElementById('gamesContainer');
+            const cApps = document.getElementById('appsContainer');
 
             if(val === '') {
                 secRecom.style.display = 'block'; 
@@ -768,17 +839,61 @@
             secApps.style.display = 'block'; 
             secGames.style.display = 'block';
             
+            // Filter Cocok Secara Pasti (Strict)
             const fGames = dbGames.filter(i => i.name.toLowerCase().includes(val));
-            let hGame = ''; 
-            fGames.forEach(item => hGame += createCardHtml(item));
-            document.getElementById('gamesContainer').innerHTML = hGame || `<div class="status-msg">${t('noGames')}</div>`;
-            document.getElementById('btnMoreGames').classList.add('hidden');
-
             const fApps = dbApps.filter(i => i.name.toLowerCase().includes(val));
-            let hApp = ''; 
-            fApps.forEach(item => hApp += createCardHtml(item));
-            document.getElementById('appsContainer').innerHTML = hApp || `<div class="status-msg">${t('noApps')}</div>`;
-            document.getElementById('btnMoreApps').classList.add('hidden');
+
+            let isTypo = false;
+            let recommendations = [];
+
+            // Jika hasil kosong, jalankan pencarian Typo (Fuzzy Search)
+            if (fGames.length === 0 && fApps.length === 0) {
+                isTypo = true;
+                const allItems = [...dbGames, ...dbApps];
+                
+                // Beri skor kedekatan karakter untuk setiap item
+                const scoredItems = allItems.map(item => {
+                    const dist = levenshteinDistance(val, item.name.toLowerCase());
+                    return { item, dist };
+                });
+
+                // Urutkan dari yang skor typonya paling sedikit
+                scoredItems.sort((a, b) => a.dist - b.dist);
+
+                // Ambil 5 rekomendasi terbaik dengan toleransi typo dinamis (maksimal 3-4 huruf salah)
+                const maxToleransi = Math.max(3, Math.floor(val.length / 2));
+                recommendations = scoredItems.filter(s => s.dist <= maxToleransi).slice(0, 5).map(s => s.item);
+            }
+
+            if (isTypo && recommendations.length > 0) {
+                secApps.style.display = 'none'; // Sembunyikan apps, gabungkan ke area games sebagai "Rekomendasi"
+                
+                let hRecom = `<div class="status-msg" style="color: var(--primary);"><i class="fa-solid fa-lightbulb"></i> ${t('didYouMean')}</div>`;
+                recommendations.forEach(item => hRecom += createCardHtml(item));
+                
+                cGames.innerHTML = hRecom;
+                document.getElementById('btnMoreGames').classList.add('hidden');
+                document.getElementById('btnMoreApps').classList.add('hidden');
+
+            } else if (isTypo && recommendations.length === 0) {
+                cGames.innerHTML = `<div class="status-msg"><i class="fa-solid fa-ghost"></i> ${t('noGames')}</div>`;
+                cApps.innerHTML = `<div class="status-msg"><i class="fa-solid fa-ghost"></i> ${t('noApps')}</div>`;
+                document.getElementById('btnMoreGames').classList.add('hidden');
+                document.getElementById('btnMoreApps').classList.add('hidden');
+            } else {
+                // Hasil Pencarian Normal
+                let hGame = ''; 
+                fGames.forEach(item => hGame += createCardHtml(item));
+                cGames.innerHTML = hGame || `<div class="status-msg">${t('noGames')}</div>`;
+                document.getElementById('btnMoreGames').classList.add('hidden');
+
+                let hApp = ''; 
+                fApps.forEach(item => hApp += createCardHtml(item));
+                cApps.innerHTML = hApp || `<div class="status-msg">${t('noApps')}</div>`;
+                document.getElementById('btnMoreApps').classList.add('hidden');
+            }
+
+            triggerScrollAnimations();
         }
 
         function toggleSet() { document.getElementById('modalSet').classList.toggle('active'); }
